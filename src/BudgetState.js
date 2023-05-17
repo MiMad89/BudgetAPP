@@ -2,7 +2,7 @@ export class BudgetState {
   #state = [];
 
   loadInitialStickyNotes() {
-    this.#state = this.#loadState();
+    this.#state = this.#localState();
   }
 
   get state() {

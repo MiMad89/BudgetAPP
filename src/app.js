@@ -1,6 +1,6 @@
 import { createAppbar } from "./components/appbar";
 import { createAddBudgetForm } from "./components/addBudgetForm";
-import { BudgetState } from "./BudgetState";
+import { BudgetState } from "./budgetState";
 
 const appEl = document.getElementById("app");
 const budgetState = new BudgetState();
