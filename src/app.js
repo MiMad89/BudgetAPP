@@ -1,7 +1,9 @@
 import { createAppbar } from "./components/appbar";
 import { createAddBudgetForm } from "./components/addBudgetForm";
+import { BudgetState } from "./BudgetState";
 
 const appEl = document.getElementById("app");
+const budgetState = new BudgetState();
 
 const createUi = () => {
   const appBar = createAppbar();
@@ -21,10 +23,14 @@ const createUi = () => {
 
 createUi();
 
-const createAddBudgetFormEl = document.getElementById('add-budget-form');
+const createAddBudgetFormEl = document.getElementById("add-budget-form");
 
-createAddBudgetFormEl.addEventListener("submit", (e) =>{
-    e.preventDefault()
+createAddBudgetFormEl.addEventListener("submit", (e) => {
+  e.preventDefault();
 
+  const amount = e.target.elements.amount.value;
+  const category = e.target.elements.category.value;
+  const type = e.target.elements.type.value;
 
-})
+  console.log(amount, category, type);
+});
